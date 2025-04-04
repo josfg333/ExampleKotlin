@@ -1,7 +1,8 @@
-public class Arena (val name: String, val height: Int, val width: Int){
-    val playerList = mutableListOf<Player>()
+class Arena (private val name: String, val height: Int, val width: Int){
+    // Contains players in the arena
+    private val playerList = mutableListOf<Player>()
 
-    public fun addPlayer(player: Player) {
+    fun addPlayer(player: Player) {
         this.playerList.add(player)
     }
 
@@ -9,9 +10,10 @@ public class Arena (val name: String, val height: Int, val width: Int){
         return "Arena $name"
     }
 
-    public fun printPlayers() {
+    fun printPlayers() {
         for (player in playerList) {
             println(player)
         }
     }
+
 }
