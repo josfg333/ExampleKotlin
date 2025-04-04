@@ -8,4 +8,10 @@ public class Arena (val name: String, val height: Int, val width: Int){
     override fun toString(): String {
         return "Arena $name"
     }
+
+    public fun printPlayers() {
+        for (player in playerList) {
+            println(player)
+        }
+    }
 }

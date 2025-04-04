@@ -7,12 +7,16 @@ fun main() {
     println("$rect2")
     println(rect1.fitsInside(rect2))
     println(rect2.fitsInside(rect1))
+    println()
 
     val arena = Arena("Bwah", 10, 20)
     val player1 = Player(arena, "Isonity")
     val player2 = Player(arena, "Fractlpaca")
 
-    println("Players: $player1, $player2")
+    arena.printPlayers()
+    println()
+
     player1.move(5,500)
-    println("Players: $player1, $player2")
+    player2.move(2,3)
+    arena.printPlayers()
 }
